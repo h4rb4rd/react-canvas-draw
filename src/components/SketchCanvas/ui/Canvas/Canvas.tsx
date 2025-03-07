@@ -89,7 +89,11 @@ export const Canvas = (props: CanvasProps) => {
 				</button>
 				<div className={cls.divider} />
 
-				<button type='button' className={cls.btn} onClick={handlePenClick}>
+				<button
+					type='button'
+					className={classNames(cls.btn, [], { [cls.penMode]: !eraseMode })}
+					onClick={handlePenClick}
+				>
 					&#9998;
 				</button>
 				<button
